@@ -21,6 +21,7 @@ namespace DigitalGeniusTestAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<TicketMessageResponse>> AddEmailReply(EmailReplyRequest emailyReplyRequest)
         {
+            this._logger.LogInformation("Request called");
             TicketMessageRequest updateRequest = new TicketMessageRequest(emailyReplyRequest);
 
             TicketMessageResponse? response = await this.gorgiasApiService.SendTicketMessageUpdate(updateRequest, emailyReplyRequest.ApiKey, emailyReplyRequest.TicketID);

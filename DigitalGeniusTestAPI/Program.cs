@@ -65,7 +65,7 @@ namespace CiscoWebexPresence.GUI
                 Log.Logger = CreateDefaultLogger().CreateLogger();
             }
 
-            Log.Information("Starting CiscoWebexPresence web host...");
+            Log.Information("Starting DigitalGeniusTestAPI web host...");
             Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
 
             WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
